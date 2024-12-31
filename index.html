@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+
+
+    <style>
+        /* Ensure the body takes up the full viewport height */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        /* Container for the video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Place behind page content */
+        }
+        /* Style the video to cover the entire background */
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Content overlaying the video */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="./assets/Live.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+ 
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Gauthami Kakani</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Gauthami Kakani</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Gauthami Kakani profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Gauthami Kakani</h1>
+            <p class="section__text__p2">Full Stack Developer</p> 
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/GauthamiK_Resume.pdf')">
+                Download Resume</button>
+                <button class="btn btn-color-1" onclick="location.href= './#contact'">
+                    Contact Info</button> 
+            </div>
+            <div id="social-container">
+            </br>
+                <img src="./assets/linkedin1.png" alt="My LinkedIn Profile"
+                class="icon" onclick="location.href='https://www.linkedin.com/in/gauthamichowdary/'" />
+                <img src="./assets/github1.png" alt="My Github Profile"
+                class="icon" onclick="location.href='https://github.com/Gauthami78'" />
+            </div>
+        </div>
+        <img src="./assets/arrow1.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#about'"/>
+    </section>
+
+    <section id="about">    
+        <p class="section__text__p1_1">Get To Know More</p>
+        <h1 class="title1">About Me</h1>
+        <div class="section-container">
+        <div class="section__pic-container">
+            <img src="./assets/about-pic.png" alt="Profile Picture" class="about-pic"/>
+        </div>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                <img src="./assets/experience.png" alt="Experience Icon" class="icon" />
+                <h3>Experience</h3>
+                <p>2+ years <br />Full Stack Development</p>  
+            </div>
+            <div class="details-container">
+                <img src="./assets/education.png" alt="Education icon" class="icon" />
+                <h3>Education</h3>
+                <p>Bachelors Degree in Computer Science <br />Masters Degree in Computer Science</p>
+            </div>
+        </div>
+        <div class="text-container">
+            <p style="text-align: justify;" class="text1">I am a recent Computer Science graduate from the University of South Florida with a passion for designing and building scalable, user-focused web applications. With over 2 years of full-stack development experience, I thrive on solving complex problems and delivering impactful solutions. I enjoy collaborating with cross-functional teams, driving projects from concept to completion, and continuously learning to stay ahead in the ever-evolving tech landscape. Dedicated to crafting innovative and efficient systems, I am excited to contribute to meaningful projects that make a difference.  </p>
+        </div>
+    </div>  
+</div>
+<img src="./assets/arrow1.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'"/>
+    </section>
+    <section id="experience">
+    <p class="section__text__p1_1">Explore My</p>
+    <h1 class="title2">Experience</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container">
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container">
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>HTML/CSS</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>JavaScript</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>React.js</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>Angular</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>Tailwind UI</h3>
+                        <p>Basic</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>TypeScript</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>JWT</h3>
+                        <p>Basic</p>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Backend Development</h2>
+                <div class="article-container">
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>C# (.NET Core/ASP.NET)</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>Node JS</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>PostgreSQL</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>Python</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>Express JS</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>MySQL</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+                    <div>
+                        <h3>Git</h3>
+                        <p>Basic</p>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="./assets/arrow1.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#projects'"/>
+    </section>
+
+
+
+
+
+
+
+    
+    <section id="projects">
+        <p class="section__text__p1_1">My Recent</p> 
+        <h1 class="title2">Projects</h1> 
+        <div class="section-container">
+        <!-- <div class="section__pic-container">
+            <img src="./assets/infosys-logo.png" alt="Profile Picture" class="about-pic"/>
+        </div> -->
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                <img src="./assets/Pic1.png" alt="Experience Icon" class="icon" /> 
+                <h3>eSeparation & Indent (Infosys Internal Applications)</h3>
+                <p >Project Description <br /> <br/>
+                    
+                    <p style="text-align: justify;">Contributed to the development and maintenance of two key internal applications: eSeparation and Indent. The eSeparation application was designed to streamline the employee separation process, handling major issue fixes and developing new features to ensure smooth transitions for employees exiting the organization. <br/> <br/>
+                        For the Indent application, which includes Indent IL(Infosys Limited) and Indent BPM(Business Process Management), contributed to the assignment of indent numbers for new employees, promotions, designation changes, and budgeting. Developed and maintained APIs for data transfer between systems and used Swagger for data validation. Additionally, created the Promotion Tab in Indent, which consolidated promotion details and provided valuable insights to business users. The backend for both applications was developed using C#, ASP.NET, VB.NET, and SQL, with most data managed through stored procedures.</p> </p> 
+                </div>
+               <div class="details-container">
+                <img src="./assets/Pic2.png" alt="Education icon" class="icon" /> 
+                <h3>Agent Session Project </h3>
+                <p>Project Description</p> <br/> <br/>
+
+                <p style="text-align: justify;">Developed the Agent Session Project during training, implementing three distinct user roles to cater to different functionalities. Utilized React, Redux, and TypeScript to ensure a scalable, modular front-end architecture. <br/> <br/>
+                    Worked on optimizing the system's performance by integrating MongoDB and Node.js, improving database efficiency and reducing system latency. Enhanced seminar management features for Host Users, improving data flow and response times. <br/> <br/> Applied Agile methodologies and CI/CD pipelines to streamline the deployment process, ensuring continuous integration. Improved the UI/UX with responsive, cross-browser compatible designs using JavaScript, HTML, and CSS, resulting in a more accessible and user-friendly interface.</p> 
+
+               </div>
+            </div>
+                
+            
+        </div>
+    </div>
+    <img src="./assets/arrow1.png" alt="arrow Icon" class="icon arrow" onclick="location.href='./#contact'"/>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section id="contact">
+        <p class="section__text__p1_1">Get in Touch</p>
+        <h1 class="title2">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img 
+                src="./assets/message.png"
+                alt="Email icon"
+                class="icon contact-icon email-icon"
+                />
+                <p><a href="mailto:gouthamichowdary1@gmail.com" class="contactText">Email</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img 
+                src="./assets/linkedin1.png"
+                alt="LinkedIn icon"
+                class="icon contact-icon"
+                />
+                <p><a href="https://www.linkedin.com/in/gauthamichowdary/" class="contactText">LinkedIn</a></p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about" class="FooterText">About</a></li>
+                    <li><a href="#experience" class="FooterText">Experience</a></li>
+                    <li><a href="#projects" class="FooterText">Projects</a></li>
+                    <li><a href="#contact" class="FooterText">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Gauthami Kakani. All Rights Reserved.</p>
+    </footer>
+   <script src="script.js"></script> 
+</body>
+
+</html>
